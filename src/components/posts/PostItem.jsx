@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
 
 const PostItem = ({ post, username, userId }) => {
-  const imgUrl = `https://blog-server-api-production.up.railway.app${post.image?.url}`; // التأكد من وجود الصورة
+  const imgUrl = `https://blog-server-api-production.up.railway.app${post?.image?.url}`; // التأكد من وجود الصورة
+
   // const imgUrl = `http://localhost:8000${post.image?.url}`; // التأكد من وجود الصورة
 
+  console.log(imgUrl);
   // تأكد من أن post.user ليس null أو undefined قبل استخدامه
   const profileLink = userId
     ? `/profile/${userId}`
